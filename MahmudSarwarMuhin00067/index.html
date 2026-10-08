@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<!-- Mirrored from www.matirangapaurashava.com/verify.php?cert_no=%E0%A6%AE%E0%A6%BE%E0%A6%9F%E0%A6%BF%2F%E0%A6%AA%E0%A7%8C%E0%A6%B0%2F%E0%A6%9C%E0%A6%BE%2F2026%2F00382&lang=bn by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Oct 2026 12:10:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>সনদ যাচাই — পৌরসভা ডিজিটাল সেন্টার</title>
+<meta name="description" content="জনগণের দোরগোড়ায় সেবা">
+
+<!-- বাংলা ফন্ট: Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;family=Noto+Serif+Bengali:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+<!-- Siyam Rupali ফন্ট (লোগো টেক্সটের জন্য) -->
+<link href="../fonts.maateen.me/siyam-rupali/font.css" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/publicae24.css?v=14">
+
+<link rel="icon" href="uploads/logos/6a8a677710545_1787455351.png">
+
+<style>
+:root {
+  --font: 'Hind Siliguri', 'SolaimanLipi', 'Kalpurush', 'Vrinda', 'Nirmala UI', Arial, sans-serif;
+  --font-heading: 'Noto Serif Bengali', 'Hind Siliguri', 'SolaimanLipi', 'Kalpurush', 'Vrinda', serif;
+  --font-logo: 'Siyam Rupali', 'Noto Serif Bengali', 'Hind Siliguri', serif;
+}
+
+/* নেভ লিংক hover — active pill */
+.main-nav a.active {
+  background: rgba(255,255,255,.18) !important;
+  color: #fff !important;
+}
+
+/* ===== মোবাইল সাইডবার ড্রয়ার ===== */
+/* ওভারলে (backdrop) */
+#navOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 990;
+}
+#navOverlay.open { display: block; }
+
+@media (max-width: 768px) {
+  /* হেডার row ঠিক করো — লোগো বাঁয়ে, বাটন ডানে */
+  header .container {
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px 12px !important;
+    gap: 8px !important;
+  }
+
+  /* লোগো সঙ্কুচিত হবে কিন্তু হারাবে না */
+  header .container > a:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+  }
+  header .container > a:first-child span:last-child span:first-child {
+    font-size: 1.05rem !important;
+  }
+  header .container > a:first-child span:last-child span:last-child {
+    font-size: .68rem !important;
+  }
+
+  /* ডানের বাটন গ্রুপ — shrink নয় */
+  header .container > div:last-child {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* লগিন বাটন ছোট করো */
+  header .container > div:last-child button,
+  header .container > div:last-child a[href*="dashboard"],
+  header .container > div:last-child a[href*="logout"] {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+  }
+
+  /* ল্যাং সুইচ ছোট */
+  header .container > div:last-child a[href*="?lang"] {
+    padding: 3px 7px !important;
+    font-size: 11px !important;
+  }
+
+  /* মেনু টগল বাটন দেখাও */
+  .menu-toggle { display: flex !important; align-items: center; }
+
+  /* ===== স্লাইডিং সাইডবার ড্রয়ার — ডান থেকে ===== */
+  .main-nav {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    height: 100%;
+    width: 280px;
+    max-width: 85vw;
+    background: #1a3a6e;
+    box-shadow: -4px 0 24px rgba(0,0,0,.35);
+    padding: 60px 0 20px;
+    z-index: 1000;
+    overflow-y: auto;
+    transform: translateX(100%);       /* বন্ধ অবস্থায় ডানে বাইরে */
+    transition: transform .28s cubic-bezier(.4,0,.2,1);
+  }
+  .main-nav.open {
+    transform: translateX(0);           /* খোলা অবস্থায় ভেতরে */
+  }
+  .main-nav a {
+    padding: 14px 22px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-radius: 0;
+    font-size: 16px;
+    width: 100%;
+    color: rgba(255,255,255,.9);
+    display: block;
+  }
+  .main-nav a:last-child { border-bottom: none; }
+
+  /* ড্রয়ারের ভেতরে বন্ধ বাটন */
+  .nav-close-btn {
+    display: flex !important;
+  }
+}
+
+/* ===== মডেল-২: প্রতিষ্ঠান ব্র্যান্ড বার (মডেল-১ এর মতোই রঙ) ===== */
+.hdr-m2-brand {
+  background: #1a3a6e;
+  border-bottom: 3px solid #f4a228;
+}
+.hdr-m2-brand-inner {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 24px 16px;
+}
+.hdr-m2-logo { flex: 0 0 auto; display:flex; align-items:center; justify-content:center; }
+.hdr-m2-logo img { height: 123px; width: 123px; object-fit: contain; border-radius: 50%; background:#fff; padding:6px; }
+.hdr-m2-logo-govt img { border-radius: 8px; background: transparent; padding: 0; }
+.hdr-m2-logo-icon { font-size: 4.8rem; }
+.hdr-m2-title { flex: 1 1 auto; text-align: center; color: #fff; }
+.hdr-m2-title h1 {
+  font-family: var(--font,'Hind Siliguri','SolaimanLipi','Kalpurush','Vrinda','Nirmala UI',Arial,sans-serif);
+  font-size: 77px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+.hdr-m2-title p { font-size: 42px; opacity: .92; margin: 0; line-height: 1.4; }
+.hdr-m2-title .hdr-m2-addr { font-size: 38px; opacity: .88; margin-top: 6px; }
+
+/* মডেল-২ নেভ হেডার — মডেল-১ এর মতোই রঙ */
+.site-header-m2 { background: #1a3a6e; }
+.site-header-m2 .nav-secondary-row { border-top-color: rgba(255,255,255,.14); }
+
+/* মডেল-২: বাঁ পাশে লোগো না থাকায় নেভ মেনু একপাশে হেলে পড়ত। সমাধান: বাঁ পাশের
+   অদৃশ্য স্পেসার ও ডানের বাটন গ্রুপ (hdr-actions) — দুটোকেই সমান flex-basis (1 1 0)
+   দেওয়া হলো, যাতে ব্রাউজার নিজে থেকেই দুই পাশ সমান-প্রস্থ রাখে এবং মাঝের নেভবার
+   আইটেমগুলো (nav-primary-slot) সবসময় প্রকৃত কেন্দ্রে থাকে — JS দিয়ে width মেপে
+   সিঙ্ক করার (আগের ভঙ্গুর পদ্ধতি, যেটা আসলে ঠিকভাবে কাজ করছিল না) কোনো দরকার নেই আর। */
+.site-header-m2 .hdr-actions-spacer { order: 1; flex: 1 1 0; min-width: 0; visibility: hidden; }
+.site-header-m2 .hdr-actions { flex: 1 1 0; min-width: 0; justify-content: flex-end; }
+.site-header-m2 .nav-primary-slot { flex: 0 1 auto; }
+
+@media (max-width: 768px) {
+  .hdr-m2-brand-inner { padding: 14px 12px; gap: 14px; }
+  .hdr-m2-logo img { height: 72px; width: 72px; }
+  .hdr-m2-logo-icon { font-size: 2.9rem; }
+  .hdr-m2-title h1 { font-size: 43px; }
+  .hdr-m2-title p, .hdr-m2-title .hdr-m2-addr { font-size: 30px; }
+  .hdr-m2-logo-govt { display: none; }
+}
+
+/* ডেস্কটপে ক্লোজ বাটন লুকাও */
+.nav-close-btn {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255,255,255,.15);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  z-index: 1001;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Navbar Visibility (page_controls থেকে) ===== -->
+
+<!-- ===== হেডার/ফুটার/হিরো মডেল (page_controls থেকে) ===== -->
+
+<!-- ===== Top Social Bar ===== -->
+
+<!-- ===== মডেল-২: প্রতিষ্ঠান ব্র্যান্ড বার (নাম+ঠিকানা+লোগো — প্রতিষ্ঠান ও সনদ সেটিংস থেকে) ===== -->
+<div class="hdr-m2-brand">
+  <div class="container hdr-m2-brand-inner">
+    <div class="hdr-m2-logo">
+              <img src="uploads/org/org_logo_org.jpg" alt="মাটিরাঙ্গা পৌরসভা">
+          </div>
+    <div class="hdr-m2-title">
+      <h1>মাটিরাঙ্গা পৌরসভা</h1>
+      <p class="hdr-m2-addr">মাটিরাঙ্গা, খাগড়াছড়ি পার্বত্য জেলা</p>    </div>
+    <div class="hdr-m2-logo hdr-m2-logo-govt">
+              <img src="uploads/org/org_logo_govt.png" alt="গণপ্রজাতন্ত্রী বাংলাদেশ সরকার">
+          </div>
+  </div>
+</div>
+
+<!-- ===== Main Header ===== -->
+<header class="site-header site-header-m2">
+  <div class="hdr-inner">
+
+    
+    <!-- মোবাইল মেনু backdrop -->
+    <div id="navOverlay"></div>
+
+        <!-- মডেল-২ তে বাঁ পাশে কোনো লোগো নেই (ব্র্যান্ড বার আলাদাভাবে উপরে থাকে), তাই ডানের
+         বাটন গ্রুপের (hdr-actions) সমান একটা অদৃশ্য স্পেসার — যাতে মাঝের নেভবার মেনু
+         পুরো লাইনে সুষমভাবে (symmetrically) সেন্টার হয়, একপাশে হেলে না পড়ে। দুটোই
+         CSS-এ সমান flex-basis (flex:1 1 0) পাওয়ায় ব্রাউজার নিজে থেকেই এদের সমান-প্রস্থ
+         রাখে — তাই ভাষা/কার্ট সংখ্যা বদলালেও (কোনো JS width-measurement ছাড়াই) সবসময়
+         নির্ভুল থাকে। -->
+    <div class="hdr-actions-spacer" id="hdrActionsSpacer" aria-hidden="true"></div>
+    
+    <!-- ডেস্কটপে: উপরের লাইনে (লোগো-বাটনের মাঝের ফাঁকা জায়গায়) যতগুলো নেভবার আইটেম ধরে, JS এখানে বসায় -->
+    <div class="nav-primary-slot" id="navPrimarySlot"></div>
+
+    <!-- ডানের বাটন গ্রুপ -->
+    <div class="hdr-actions" id="hdrActions">
+      <button class="menu-toggle" id="menuToggle" aria-label="মেনু" aria-expanded="false">&#9776;</button>
+      <a href="verifyd3ec.html?cert_no=%E0%A6%AE%E0%A6%BE%E0%A6%9F%E0%A6%BF%2F%E0%A6%AA%E0%A7%8C%E0%A6%B0%2F%E0%A6%9C%E0%A6%BE%2F2026%2F00382&amp;lang=en" class="hdr-lang">EN</a>
+      <a href="javascript:void(0)" onclick="openCartPanel()" class="hdr-cart" title="কার্ট">
+        🛒 <span id="cart-count" class="cart-badge">0</span>
+      </a>
+              <button onclick="openLoginModal()" class="hdr-btn-login">🔐 লগিন</button>
+          </div>
+
+  </div>
+
+  <!-- ডেস্কটপে: উপরের লাইনে যা বাকি থাকে তা এই পুরো-প্রস্থের দ্বিতীয় লাইনে; এরপরও বাকি থাকলে "অন্যান্য" ড্রপডাউনে -->
+  <div class="nav-secondary-row" id="navSecondaryRow" style="display:none"></div>
+
+  <!-- মোবাইল ড্রয়ার — সবগুলো লিংকের মূল/উৎস তালিকা এখানে থাকে; ডেস্কটপে JS এখান থেকেই উপরের দুই লাইনে বিলি করে দেয় -->
+  <nav class="main-nav" id="mainNav">
+    <button class="nav-close-btn" id="navCloseBtn" aria-label="মেনু বন্ধ">✕</button>
+        <!-- সবগুলো লিংক একটা flex-wrap কন্টেইনারে; ডেস্কটপে JS এখান থেকে items নিয়ে navPrimarySlot/navSecondaryRow এ বিলি করে, মোবাইলে এখানেই স্বাভাবিক তালিকা হিসেবে দেখায় -->
+    <div class="nav-flow" id="navFlow">
+      <a href="index.html" >হোম</a><a href="about.html" >আমাদের সম্পর্কে</a><a href="services.html" >সেবাসমূহ</a><a href="applications.html" >সনদ আবেদন</a><a href="news.html" >সংবাদ</a><a href="officials.html" >কর্মকর্তাবৃন্দ</a>      <div class="nav-more" id="navMore" style="display:none">
+        <a href="#" class="nav-more-toggle" onclick="return false;">অন্যান্য ▾</a>
+        <div class="nav-more-menu" id="navMoreMenu"></div>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+<!-- ===== লগিন / নিবন্ধন পপআপ মোডাল ===== -->
+<style>
+.lm-wrap{background:#fff;border-radius:16px;width:100%;max-width:460px;max-height:92vh;overflow-y:auto;overflow-x:hidden;box-shadow:0 24px 64px rgba(0,0,0,.3);animation:modalIn .22s ease;display:flex;flex-direction:column}
+.lm-head{background:linear-gradient(135deg,#1a3a6e,#0f2448);color:#fff;padding:24px 24px 20px;text-align:center;position:relative;flex-shrink:0}
+.lm-close{position:absolute;top:12px;right:14px;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:18px;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lm-tabs{display:flex;border-bottom:2px solid #e5e7eb;flex-shrink:0}
+.lm-tab{flex:1;padding:12px 8px;background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;font-family:var(--font,'Hind Siliguri',sans-serif);font-size:14px;font-weight:600;color:#6b7280;cursor:pointer;transition:all .18s}
+.lm-tab.active{color:#1a3a6e;border-bottom-color:#1a3a6e}
+.lm-body{padding:22px 24px 24px}
+.lm-panel{display:none}.lm-panel.active{display:block}
+.lm-err{background:#fef2f2;color:#991b1b;border:1px solid #fca5a5;padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:14px;display:none}
+.lm-ok{background:#f0fdf4;color:#166534;border:1px solid #86efac;padding:12px 14px;border-radius:8px;font-size:13px;margin-bottom:14px;line-height:1.6;display:none}
+.lm-hint{background:#eff6ff;border-radius:8px;padding:10px 14px;font-size:12px;color:#1e40af;margin-bottom:14px;line-height:1.6}
+.lm-fg{margin-bottom:13px}
+.lm-fg label{display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:5px}
+.lm-fc{width:100%;padding:10px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:14px;font-family:var(--font,'Hind Siliguri',sans-serif);box-sizing:border-box;background:#fff;color:#111;transition:border-color .15s}
+.lm-fc:focus{outline:none;border-color:#1a3a6e;box-shadow:0 0 0 3px rgba(26,58,110,.1)}
+.lm-btn{width:100%;padding:12px;border:none;border-radius:8px;font-size:15px;font-family:var(--font,'Hind Siliguri',sans-serif);font-weight:600;cursor:pointer;transition:background .15s;margin-top:2px}
+.lm-btn-login{background:#1a3a6e;color:#fff}.lm-btn-login:hover{background:#0f2448}
+.lm-btn-reg{background:#f4a228;color:#fff}.lm-btn-reg:hover{background:#e8831a}
+.lm-row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:420px){.lm-row2{grid-template-columns:1fr}}
+</style>
+
+<div id="loginModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;align-items:center;justify-content:center;padding:16px">
+  <div class="lm-wrap">
+    <!-- হেডার -->
+    <div class="lm-head">
+      <button class="lm-close" onclick="closeLoginModal()" aria-label="বন্ধ করুন">✕</button>
+              <img src="uploads/logos/6a8a677710545_1787455351.png" alt="logo" style="height:46px;object-fit:contain;margin-bottom:10px;filter:brightness(0) invert(1)">
+            <h2 style="font-size:1.2rem;margin-bottom:3px;font-weight:700">পৌরসভা ডিজিটাল সেন্টার</h2>
+      <p style="font-size:13px;opacity:.82">লগিন করুন অথবা নতুন একাউন্ট খুলুন</p>
+    </div>
+
+    <!-- ট্যাব বার -->
+    <div class="lm-tabs">
+      <button class="lm-tab active" id="lmTabLogin" onclick="lmSwitch('login')">🔐 লগিন</button>
+      <button class="lm-tab" id="lmTabReg" onclick="lmSwitch('register')">📝 নতুন নিবন্ধন</button>
+    </div>
+
+    <div class="lm-body">
+      <!-- লগিন প্যানেল -->
+      <div class="lm-panel active" id="lmPanelLogin">
+        <div class="lm-err" id="lmLoginErr"></div>
+        <div class="lm-hint">🔐 <strong>এডমিন:</strong> username দিন &nbsp;|&nbsp; 👤 <strong>গ্রাহক:</strong> কাস্টমার আইডি দিন (যেমন: CUS00001)</div>
+        <form id="lmLoginForm" onsubmit="lmDoLogin(event)">
+          <div class="lm-fg">
+            <label>ইউজারনেম / কাস্টমার আইডি</label>
+            <input type="text" id="mlLogin" class="lm-fc" placeholder="admin বা CUS00001" required autocomplete="username">
+          </div>
+          <div class="lm-fg">
+            <label>পাসওয়ার্ড</label>
+            <input type="password" id="mlPass" class="lm-fc" placeholder="••••••••" required autocomplete="current-password">
+          </div>
+          <button type="submit" class="lm-btn lm-btn-login" id="lmLoginBtn">🔐 লগিন করুন</button>
+        </form>
+      </div>
+
+      <!-- নিবন্ধন প্যানেল -->
+      <div class="lm-panel" id="lmPanelReg">
+        <div class="lm-err" id="lmRegErr"></div>
+        <div class="lm-ok" id="lmRegOk"></div>
+        <div class="lm-hint" id="lmRegHint">👤 গ্রাহক হিসেবে নিবন্ধন করুন। সফল হলে একটি <strong>কাস্টমার আইডি</strong> পাবেন।</div>
+        <form id="lmRegForm" onsubmit="lmDoRegister(event)">
+          <div class="lm-fg">
+            <label>পূর্ণ নাম <span style="color:red">*</span></label>
+            <input type="text" id="lmRName" class="lm-fc" placeholder="আপনার নাম লিখুন" required>
+          </div>
+          <div class="lm-row2">
+            <div class="lm-fg">
+              <label>ফোন নম্বর <span style="color:red">*</span></label>
+              <div style="display:flex;gap:6px">
+                <input type="tel" id="lmRPhone" class="lm-fc" placeholder="01XXXXXXXXX" maxlength="11" inputmode="numeric" oninput="lmOnPhoneChanged()" required style="flex:1">
+                <button type="button" id="lmOtpSendBtn" onclick="lmRequestOtp()" disabled
+                  style="white-space:nowrap;padding:0 12px;border:1.5px solid #cbd5e1;background:#f8fafc;color:#475569;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit">কোড নিন</button>
+              </div>
+            </div>
+            <div class="lm-fg">
+              <label>ইমেইল (ঐচ্ছিক)</label>
+              <input type="email" id="lmREmail" class="lm-fc" placeholder="email@mail.com">
+            </div>
+          </div>
+
+          <div id="lmOtpStatusMsg" style="font-size:12px;margin:-6px 0 10px;line-height:1.5"></div>
+          <div id="lmOtpCodeRow" style="display:none;margin:-4px 0 13px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px">
+            <div style="display:flex;gap:8px;align-items:flex-end">
+              <div style="flex:1">
+                <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:4px">যাচাইকরণ কোড</label>
+                <input type="text" id="lmOtpCodeInput" class="lm-fc" maxlength="6" inputmode="numeric" placeholder="৬ ডিজিটের কোড">
+              </div>
+              <button type="button" id="lmOtpVerifyBtn" onclick="lmVerifyOtp()"
+                style="white-space:nowrap;padding:10px 14px;border:none;background:#10b981;color:#fff;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit">কোড যাচাই করুন</button>
+            </div>
+          </div>
+          <div id="lmOtpVerifiedBadge" style="display:none;margin:-4px 0 13px;font-size:13px;font-weight:700;color:#059669">✅ মোবাইল নম্বর যাচাইকৃত</div>
+
+          <div class="lm-fg">
+            <label>ঠিকানা (ঐচ্ছিক)</label>
+            <input type="text" id="lmRAddr" class="lm-fc" placeholder="আপনার ঠিকানা">
+          </div>
+          <div class="lm-row2">
+            <div class="lm-fg">
+              <label>পাসওয়ার্ড <span style="color:red">*</span></label>
+              <input type="password" id="lmRPass" class="lm-fc" placeholder="কমপক্ষে ৬ অক্ষর" required>
+            </div>
+            <div class="lm-fg">
+              <label>পাসওয়ার্ড নিশ্চিত</label>
+              <input type="password" id="lmRPass2" class="lm-fc" placeholder="একই পাসওয়ার্ড" required>
+            </div>
+          </div>
+          <button type="submit" class="lm-btn lm-btn-reg" id="lmRegBtn">📝 একাউন্ট খুলুন</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---- modal open/close ---- */
+function openLoginModal(tab){
+  var m=document.getElementById('loginModal');
+  m.style.display='flex';
+  document.body.style.overflow='hidden';
+  lmSwitch(tab||'login');
+  setTimeout(function(){
+    var f=document.getElementById(tab==='register'?'lmRName':'mlLogin');
+    if(f) f.focus();
+  },150);
+}
+function closeLoginModal(){
+  document.getElementById('loginModal').style.display='none';
+  document.body.style.overflow='';
+}
+document.getElementById('loginModal').addEventListener('click',function(e){
+  if(e.target===this) closeLoginModal();
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'&&document.getElementById('loginModal').style.display==='flex') closeLoginModal();
+});
+
+/* ---- tab switch ---- */
+function lmSwitch(tab){
+  document.getElementById('lmPanelLogin').classList.toggle('active', tab==='login');
+  document.getElementById('lmPanelReg').classList.toggle('active', tab==='register');
+  document.getElementById('lmTabLogin').classList.toggle('active', tab==='login');
+  document.getElementById('lmTabReg').classList.toggle('active', tab==='register');
+}
+
+/* ---- লগিন ---- */
+function lmDoLogin(e){
+  e.preventDefault();
+  var errBox=document.getElementById('lmLoginErr');
+  var btn=document.getElementById('lmLoginBtn');
+  var login=document.getElementById('mlLogin').value.trim();
+  var pass=document.getElementById('mlPass').value;
+  errBox.style.display='none';
+  btn.disabled=true; btn.textContent='⏳ লগিন হচ্ছে...';
+  var fd=new FormData();
+  fd.append('action','login'); fd.append('ajax','1');
+  fd.append('login',login); fd.append('password',pass);
+  fetch('login.html',{method:'POST',body:fd})
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(d.success){window.location.href=d.redirect;}
+      else{
+        errBox.textContent='⚠️ '+(d.error||'লগিন ব্যর্থ হয়েছে।');
+        errBox.style.display='block';
+        btn.disabled=false; btn.textContent='🔐 লগিন করুন';
+        document.getElementById('mlPass').value='';
+        document.getElementById('mlPass').focus();
+      }
+    })
+    .catch(function(){
+      errBox.textContent='⚠️ সংযোগ সমস্যা। আবার চেষ্টা করুন।';
+      errBox.style.display='block';
+      btn.disabled=false; btn.textContent='🔐 লগিন করুন';
+    });
+}
+
+/* ---- নিবন্ধনের মোবাইল OTP যাচাই ---- */
+var lmOtpVerifiedPhone = null;
+var lmOtpTimer = null;
+
+function lmOnPhoneChanged(){
+  var v = document.getElementById('lmRPhone').value.trim();
+  var sendBtn = document.getElementById('lmOtpSendBtn');
+  if(sendBtn) sendBtn.disabled = (v.length !== 11);
+  if(lmOtpVerifiedPhone && lmOtpVerifiedPhone !== v){
+    lmOtpVerifiedPhone = null;
+    if(lmOtpTimer){ clearInterval(lmOtpTimer); lmOtpTimer = null; }
+    var badge=document.getElementById('lmOtpVerifiedBadge'); if(badge) badge.style.display='none';
+    var codeRow=document.getElementById('lmOtpCodeRow'); if(codeRow) codeRow.style.display='none';
+    var statusEl=document.getElementById('lmOtpStatusMsg'); if(statusEl) statusEl.textContent='';
+    if(sendBtn){ sendBtn.style.display=''; sendBtn.textContent='কোড নিন'; }
+  }
+}
+
+function lmRequestOtp(){
+  var phone = document.getElementById('lmRPhone').value.trim();
+  if(phone.length !== 11) return;
+  var btn = document.getElementById('lmOtpSendBtn');
+  var statusEl = document.getElementById('lmOtpStatusMsg');
+  if(btn) btn.disabled = true;
+  var fd = new URLSearchParams({action:'send', phone:phone});
+  fetch('ajax_otp.json', {method:'POST', body:fd})
+    .then(function(r){return r.json();})
+    .then(function(res){
+      if(res.ok){
+        var codeRow=document.getElementById('lmOtpCodeRow'); if(codeRow) codeRow.style.display='block';
+        var codeInp=document.getElementById('lmOtpCodeInput'); if(codeInp) codeInp.value='';
+        if(statusEl){ statusEl.style.color='#065f46'; statusEl.textContent='মোবাইল নম্বরে একটি কোড পাঠানো হয়েছে।'; }
+        lmStartOtpCountdown(res.remaining || 600);
+      } else {
+        if(btn) btn.disabled=false;
+        if(statusEl){ statusEl.style.color='#dc2626'; statusEl.textContent=res.error || 'কোড পাঠানো যায়নি।'; }
+      }
+    })
+    .catch(function(){
+      if(btn) btn.disabled=false;
+      if(statusEl){ statusEl.style.color='#dc2626'; statusEl.textContent='নেটওয়ার্ক সমস্যা, আবার চেষ্টা করুন।'; }
+    });
+}
+
+function lmStartOtpCountdown(seconds){
+  var btn=document.getElementById('lmOtpSendBtn');
+  if(lmOtpTimer) clearInterval(lmOtpTimer);
+  var remaining = Math.max(0, parseInt(seconds,10)||0);
+  function tick(){
+    var m=Math.floor(remaining/60), s=remaining%60;
+    var mm=(m<10?'0':'')+m, ss=(s<10?'0':'')+s;
+    if(btn){ btn.disabled=true; btn.textContent='পুনরায় '+mm+':'+ss; }
+    if(remaining<=0){
+      clearInterval(lmOtpTimer); lmOtpTimer=null;
+      if(btn){ btn.disabled=false; btn.textContent='আবার কোড নিন'; }
+      return;
+    }
+    remaining--;
+  }
+  tick();
+  lmOtpTimer=setInterval(tick,1000);
+}
+
+function lmVerifyOtp(){
+  var phone=document.getElementById('lmRPhone').value.trim();
+  var codeInp=document.getElementById('lmOtpCodeInput');
+  var code=codeInp?codeInp.value.trim():'';
+  var statusEl=document.getElementById('lmOtpStatusMsg');
+  if(!code){ if(statusEl){statusEl.style.color='#dc2626'; statusEl.textContent='কোড লিখুন।';} return; }
+  var vbtn=document.getElementById('lmOtpVerifyBtn');
+  if(vbtn) vbtn.disabled=true;
+  var fd=new URLSearchParams({action:'verify', phone:phone, code:code});
+  fetch('ajax_otp.json', {method:'POST', body:fd})
+    .then(function(r){return r.json();})
+    .then(function(res){
+      if(vbtn) vbtn.disabled=false;
+      if(res.ok){
+        lmOtpVerifiedPhone=phone;
+        if(lmOtpTimer){ clearInterval(lmOtpTimer); lmOtpTimer=null; }
+        var codeRow=document.getElementById('lmOtpCodeRow'); if(codeRow) codeRow.style.display='none';
+        var sendBtn=document.getElementById('lmOtpSendBtn'); if(sendBtn) sendBtn.style.display='none';
+        var badge=document.getElementById('lmOtpVerifiedBadge'); if(badge) badge.style.display='block';
+        if(statusEl) statusEl.textContent='';
+      } else {
+        if(statusEl){ statusEl.style.color='#dc2626'; statusEl.textContent=res.error || 'যাচাই ব্যর্থ হয়েছে।'; }
+      }
+    })
+    .catch(function(){
+      if(vbtn) vbtn.disabled=false;
+      if(statusEl){ statusEl.style.color='#dc2626'; statusEl.textContent='নেটওয়ার্ক সমস্যা, আবার চেষ্টা করুন।'; }
+    });
+}
+
+/* ---- নিবন্ধন ---- */
+function lmDoRegister(e){
+  e.preventDefault();
+  var errBox=document.getElementById('lmRegErr');
+  var okBox=document.getElementById('lmRegOk');
+  var hint=document.getElementById('lmRegHint');
+  var btn=document.getElementById('lmRegBtn');
+  var name=document.getElementById('lmRName').value.trim();
+  var phone=document.getElementById('lmRPhone').value.trim();
+  var email=document.getElementById('lmREmail').value.trim();
+  var addr=document.getElementById('lmRAddr').value.trim();
+  var pass=document.getElementById('lmRPass').value;
+  var pass2=document.getElementById('lmRPass2').value;
+  errBox.style.display='none'; okBox.style.display='none';
+  if(!name||!phone||!pass){errBox.textContent='⚠️ নাম, ফোন ও পাসওয়ার্ড দেওয়া আবশ্যক।';errBox.style.display='block';return;}
+  if(pass.length<6){errBox.textContent='⚠️ পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে।';errBox.style.display='block';return;}
+  if(pass!==pass2){errBox.textContent='⚠️ পাসওয়ার্ড দুটি মিলছে না।';errBox.style.display='block';return;}
+  if(lmOtpVerifiedPhone !== phone){errBox.textContent='⚠️ আগে মোবাইল নম্বরটি OTP কোড দিয়ে যাচাই করুন।';errBox.style.display='block';return;}
+  btn.disabled=true; btn.textContent='⏳ নিবন্ধন হচ্ছে...';
+  var fd=new FormData();
+  fd.append('action','register'); fd.append('ajax','1');
+  fd.append('reg_name',name); fd.append('reg_phone',phone);
+  fd.append('reg_email',email); fd.append('reg_address',addr);
+  fd.append('reg_password',pass); fd.append('reg_password2',pass2);
+  fetch('login.html',{method:'POST',body:fd})
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(d.success){
+        okBox.innerHTML='✅ একাউন্ট তৈরি সফল! আপনার কাস্টমার আইডি: <strong>'+d.id+'</strong> — এটি সংরক্ষণ করুন।<br><br><button onclick="lmSwitch(\'login\')" style="background:#1a3a6e;color:#fff;border:none;padding:8px 18px;border-radius:7px;font-size:13px;cursor:pointer;font-weight:600">→ লগিন করুন</button>';
+        okBox.style.display='block';
+        hint.style.display='none';
+        document.getElementById('lmRegForm').style.display='none';
+        btn.disabled=false; btn.textContent='📝 একাউন্ট খুলুন';
+      } else {
+        errBox.textContent='⚠️ '+(d.error||'নিবন্ধন ব্যর্থ হয়েছে।');
+        errBox.style.display='block';
+        btn.disabled=false; btn.textContent='📝 একাউন্ট খুলুন';
+      }
+    })
+    .catch(function(){
+      errBox.textContent='⚠️ সংযোগ সমস্যা। আবার চেষ্টা করুন।';
+      errBox.style.display='block';
+      btn.disabled=false; btn.textContent='📝 একাউন্ট খুলুন';
+    });
+}
+</script>
+
+<!-- ===== বার্তা পাঠানোর পপআপ মোডাল (হিরো ব্যানার/ফুটার "যোগাযোগ" থেকে খোলে — মডেল-২) ===== -->
+<style>
+.msg-wrap{background:#fff;border-radius:16px;width:100%;max-width:460px;max-height:92vh;overflow-y:auto;overflow-x:hidden;box-shadow:0 24px 64px rgba(0,0,0,.3);animation:modalIn .22s ease;display:flex;flex-direction:column}
+.msg-head{background:linear-gradient(135deg,#1a3a6e,#0f2448);color:#fff;padding:22px 24px 18px;text-align:center;position:relative;flex-shrink:0}
+.msg-close{position:absolute;top:12px;right:14px;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:18px;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.msg-body{padding:22px 24px 24px}
+.msg-err{background:#fef2f2;color:#991b1b;border:1px solid #fca5a5;padding:10px 14px;border-radius:8px;font-size:13px;margin-bottom:14px;display:none}
+.msg-ok{background:#f0fdf4;color:#166534;border:1px solid #86efac;padding:12px 14px;border-radius:8px;font-size:13px;margin-bottom:14px;line-height:1.6;display:none}
+.msg-hint{background:#eff6ff;border-radius:8px;padding:10px 14px;font-size:12px;color:#1e40af;margin-bottom:16px;line-height:1.6}
+.msg-fg{margin-bottom:13px}
+.msg-fg label{display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:5px}
+.msg-fc{width:100%;padding:10px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:14px;font-family:var(--font,'Hind Siliguri',sans-serif);box-sizing:border-box;background:#fff;color:#111;transition:border-color .15s}
+.msg-fc:focus{outline:none;border-color:#1a3a6e;box-shadow:0 0 0 3px rgba(26,58,110,.1)}
+.msg-btn{width:100%;padding:12px;border:none;border-radius:8px;font-size:15px;font-family:var(--font,'Hind Siliguri',sans-serif);font-weight:600;cursor:pointer;transition:background .15s;margin-top:2px;background:#1a3a6e;color:#fff}
+.msg-btn:hover{background:#0f2448}
+.msg-btn:disabled{opacity:.65;cursor:default}
+</style>
+
+<div id="messageModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;align-items:center;justify-content:center;padding:16px">
+  <div class="msg-wrap">
+    <div class="msg-head">
+      <button class="msg-close" onclick="closeMessageModal()" aria-label="বন্ধ করুন">✕</button>
+      <div style="font-size:2rem;margin-bottom:6px">📨</div>
+            <h2 style="font-size:1.15rem;margin-bottom:3px;font-weight:700">মাটিরাঙ্গা পৌরসভা</h2>
+      <p style="font-size:13px;opacity:.82">আমাদের বার্তা পাঠান</p>
+    </div>
+
+    <div class="msg-body">
+      <div class="msg-err" id="msgErr"></div>
+      <div class="msg-ok" id="msgOk"></div>
+
+            <!-- লগিন নেই: নাম+ফোন+ঠিকানা(ঐচ্ছিক)+বার্তা — OTP ছাড়াই সরাসরি পাঠানো যাবে -->
+      <div class="msg-hint">ℹ️ কোনো একাউন্ট তৈরি হবে না — শুধু নিচের তথ্য দিয়ে বার্তাটি সরাসরি পাঠানো যাবে।</div>
+      <form id="msgFormGuest" onsubmit="return msgSendGuest(event)">
+        <div class="msg-fg">
+          <label>আপনার নাম *</label>
+          <input type="text" id="msgGName" class="msg-fc" placeholder="আপনার পূর্ণ নাম" required>
+        </div>
+        <div class="msg-fg">
+          <label>মোবাইল নম্বর *</label>
+          <input type="tel" id="msgGPhone" class="msg-fc" placeholder="01XXXXXXXXX" maxlength="11" inputmode="numeric" oninput="msgOnPhoneChanged()" required>
+        </div>
+        <div id="msgPhoneStatusMsg" style="font-size:12px;margin:-6px 0 10px;line-height:1.5"></div>
+
+        <div class="msg-fg">
+          <label>ঠিকানা (ঐচ্ছিক)</label>
+          <input type="text" id="msgGAddr" class="msg-fc" placeholder="আপনার ঠিকানা">
+        </div>
+        <div class="msg-fg">
+          <label>আপনার বার্তা *</label>
+          <textarea id="msgGText" class="msg-fc" rows="4" required placeholder="আপনার বার্তা এখানে লিখুন..."></textarea>
+        </div>
+        <button type="submit" class="msg-btn" id="msgGuestBtn">📨 বার্তা পাঠান</button>
+      </form>
+          </div>
+  </div>
+</div>
+
+<script>
+function openMessageModal(){
+  var m = document.getElementById('messageModal');
+  m.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeMessageModal(){
+  document.getElementById('messageModal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('messageModal').addEventListener('click', function(e){
+  if (e.target === this) closeMessageModal();
+});
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape' && document.getElementById('messageModal').style.display === 'flex') closeMessageModal();
+});
+
+/* ---- অতিথি বার্তা: শুধু ফোন নম্বর আগে থেকে নিবন্ধিত কিনা যাচাই (OTP প্রয়োজন নেই) ---- */
+var msgPhoneAlreadyRegistered = false;
+var msgPhoneCheckTimer = null;
+
+function msgOnPhoneChanged(){
+  clearTimeout(msgPhoneCheckTimer);
+  var v = document.getElementById('msgGPhone').value.trim();
+  var statusEl = document.getElementById('msgPhoneStatusMsg');
+
+  if (v.length !== 11) {
+    statusEl.style.display = 'none';
+    msgPhoneAlreadyRegistered = false;
+    return;
+  }
+
+  msgPhoneCheckTimer = setTimeout(function(){
+    fetch('ajax_check_phoned9bf.json?phone=' + encodeURIComponent(v))
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (d.exists) {
+          msgPhoneAlreadyRegistered = true;
+          statusEl.style.display = 'block';
+          statusEl.style.color = '#c0392b';
+          statusEl.innerHTML = '⚠️ এই নম্বরটি আগে থেকে নিবন্ধিত। <a href="login.html">বার্তা পাঠাতে লগিন করুন</a>';
+        } else {
+          msgPhoneAlreadyRegistered = false;
+          statusEl.style.display = 'none';
+        }
+      });
+  }, 500);
+}
+
+/* ---- অতিথি বার্তা পাঠানো ---- */
+function msgSendGuest(e){
+  e.preventDefault();
+  var errBox = document.getElementById('msgErr');
+  var okBox  = document.getElementById('msgOk');
+  var btn    = document.getElementById('msgGuestBtn');
+  var name   = document.getElementById('msgGName').value.trim();
+  var phone  = document.getElementById('msgGPhone').value.trim();
+  var addr   = document.getElementById('msgGAddr').value.trim();
+  var text   = document.getElementById('msgGText').value.trim();
+  errBox.style.display = 'none'; okBox.style.display = 'none';
+
+  if (!name || !phone || !text) { errBox.textContent = '⚠️ নাম, মোবাইল নম্বর এবং বার্তা আবশ্যক।'; errBox.style.display = 'block'; return false; }
+  if (phone.length !== 11) { errBox.textContent = '⚠️ সঠিক মোবাইল নম্বর দিন।'; errBox.style.display = 'block'; return false; }
+  if (msgPhoneAlreadyRegistered) { errBox.textContent = '⚠️ এই নম্বরটি আগে থেকে নিবন্ধিত, বার্তা পাঠাতে লগিন করুন।'; errBox.style.display = 'block'; return false; }
+
+  btn.disabled = true; btn.textContent = '⏳ পাঠানো হচ্ছে...';
+  var fd = new FormData();
+  fd.append('action','send_guest'); fd.append('name',name); fd.append('phone',phone);
+  fd.append('address',addr); fd.append('message',text);
+  fetch('ajax_message.json', {method:'POST', body:fd})
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      btn.disabled = false; btn.textContent = '📨 বার্তা পাঠান';
+      if (d.ok) {
+        okBox.textContent = '✅ আপনার বার্তা পাঠানো হয়েছে। ধন্যবাদ!';
+        okBox.style.display = 'block';
+        document.getElementById('msgFormGuest').reset();
+      } else {
+        errBox.textContent = '⚠️ ' + (d.error || 'বার্তা পাঠানো যায়নি।');
+        errBox.style.display = 'block';
+      }
+    })
+    .catch(function(){
+      btn.disabled = false; btn.textContent = '📨 বার্তা পাঠান';
+      errBox.textContent = '⚠️ সংযোগ সমস্যা। আবার চেষ্টা করুন।';
+      errBox.style.display = 'block';
+    });
+  return false;
+}
+</script>
+
+<main class="main-content">
+<style>
+.verify-page-wrap { max-width: 760px; margin: 32px auto 48px; padding: 0 16px; }
+.verify-banner {
+  border-radius: 16px;
+  padding: 26px 24px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+.verify-banner.ok  { background: #ecfdf5; border: 2px solid #a7f3d0; }
+.verify-banner.bad { background: #fef2f2; border: 2px solid #fecaca; }
+.verify-icon { font-size: 3rem; line-height: 1; margin-bottom: 8px; }
+.verify-headline { font-size: 1.2rem; font-weight: 800; margin-bottom: 6px; }
+.verify-banner.ok  .verify-headline { color: #047857; }
+.verify-banner.bad .verify-headline { color: #b91c1c; }
+.verify-sub { font-size: .95rem; color: #374151; line-height: 1.7; }
+.verify-cert-no {
+  display: inline-block; margin-top: 10px; font-weight: 700; color: #1a3a6e;
+  background: #eff6ff; padding: 4px 14px; border-radius: 8px; font-size: .95rem;
+}
+.verify-meta { display:flex; gap:24px; flex-wrap:wrap; justify-content:center; margin-top:14px; font-size:.85rem; color:#6b7280; }
+.verify-meta strong { color:#1f2937; }
+.verify-detail-wrap {
+  border: 2px solid #e2eaf4; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 2px 12px rgba(26,58,110,.07); background:#fff;
+}
+.verify-detail-head {
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 12px 18px; background:#f8fafc; border-bottom:1px solid #e2eaf4;
+  font-weight:700; color:var(--primary); font-size:.92rem;
+}
+.verify-detail-body { padding: 18px 20px 22px; }
+.verify-back-link { display:block; text-align:center; margin-top:18px; font-size:.9rem; }
+
+/* ===== আসল সনদের তথ্য বক্স/ঠিকানা বক্স/সদস্য টেবিলের CSS — শুধু প্রয়োজনীয় অংশটুকু ===== */
+.cert-info-box { border:none; padding:0; margin:0 0 10px; }
+.cert-row { display:flex; margin-bottom:4px; font-size:14.5px; line-height:1.5; align-items:flex-start; }
+.cert-row:last-child { margin-bottom:0; }
+.cert-lbl { min-width:180px; flex-shrink:0; color:#374151; }
+.cert-col { margin:0 6px; flex-shrink:0; color:#9ca3af; }
+.cert-val { flex:1; color:#111827; }
+.cert-bold { font-weight:700; }
+.cert-addr-box { border:none; padding:0; margin:0 0 10px; }
+.cert-addr-box + .cert-addr-box { margin-top:14px !important; padding-top:14px; border-top:1px dashed #e5e7eb; }
+.cert-row-2col { display:flex; margin-bottom:4px; font-size:14.5px; line-height:1.5; flex-wrap:wrap; gap:6px 0; }
+.cert-row-2col:last-child { margin-bottom:0; }
+.cert-half { flex:1 1 260px; display:flex; align-items:flex-start; }
+.cert-half .cert-lbl { min-width:170px; }
+
+.verify-detail-head a {
+  font-size:.8rem; font-weight:700; color:#fff; background:#0f2448;
+  border:none; padding:6px 14px; border-radius:7px; cursor:pointer; text-decoration:none;
+}
+.verify-detail-head a:hover { background:#1a3a6e; }
+
+@media print {
+  .verify-back-link, .verify-detail-head a, header, footer { display:none !important; }
+  .verify-detail-wrap { border:none; box-shadow:none; }
+}
+</style>
+
+<div class="verify-page-wrap">
+      <div class="verify-banner ok">
+      <div class="verify-icon">✅</div>
+      <div class="verify-headline">বৈধ সনদ</div>
+      <div class="verify-sub">
+        মাটিরাঙ্গা পৌরসভা থেকে এই <strong> ভোটার প্রত্যায়ন </strong> প্রদান করা হয়েছে।      </div>
+      <div class="verify-cert-no">📜 সনদ নং: মাটি/পৌর/বিবিধ/২০২৬/০০১/০০০৬৭ </div>
+      <div class="verify-meta">
+        <div>👤 <strong> সাহেদা আক্তার </strong></div>
+        <div>📅 অনুমোদনের তারিখ: <strong>23/09/2026</strong></div>
+      </div>
+    </div>
+
+    <div class="verify-detail-wrap">
+      <div class="verify-detail-head">
+        <span>📄 সনদের বিস্তারিত</span>
+              </div>
+      <div class="verify-detail-body">
+        <div class="cert-info-box">
+
+  <!-- নাম — form_data থেকে (আবেদনকারী নয়, সনদের বিষয়ব্যক্তির নাম) -->
+      <div class="cert-row">
+    <span class="cert-lbl">নাম</span>
+    <span class="cert-col">:</span>
+    <span class="cert-val cert-bold"> মাহমুদ সরোয়ার মুহিন </span>
+  </div>
+  
+    <div class="cert-row">
+    <span class="cert-lbl">পিতার নাম</span>
+    <span class="cert-col">:</span>
+    <span class="cert-val"> মনির আহাম্মদ  </span>
+  </div>
+  
+    <div class="cert-row">
+    <span class="cert-lbl">মাতার নাম</span>
+    <span class="cert-col">:</span>
+    <span class="cert-val">জোহরা বেগম </span>
+  </div>
+  
+  
+    <div class="cert-row">
+    <span class="cert-lbl">জন্ম তারিখ</span>
+    <span class="cert-col">:</span>
+    <span class="cert-val"> ২০০৫-১১-০৫ </span>
+  </div>
+  
+    <div class="cert-row">
+    <span class="cert-lbl">জন্ম নিবন্ধন নাম্বার</span>
+    <span class="cert-col">:</span>
+    <span class="cert-val"> ২০০৫২৬৯২০৬৮১১২৯১৬ </span>
+  </div>
+  
+  
+  <!-- গ্রাম: ঠিকানা বক্সে দেখানো হয়, এখানে নয় -->
+
+  <!-- অতিরিক্ত ফিল্ড (ফর্মের সিরিয়াল মেনে) -->
+    <div class="cert-row">
+    <span class="cert-lbl">মোবাইল</span>
+    <span class="cert-col">:</span>
+    <span class="cert-val">-</span>
+  </div>
+  
+  <!-- মোবাইল নম্বর সনদে দেখাবে না (শুধু আবেদনকারীর রেকর্ডে থাকবে) -->
+
+</div>
+<div class="cert-addr-box cert-addr-single">
+    
+  <!-- Row 1: হোল্ডিং নং | মৌজা — খালি হলে "-" -->
+  <div class="cert-row-2col">
+    <div class="cert-half">
+      <span class="cert-lbl">হোল্ডিং নং</span>
+      <span class="cert-col">:</span>
+      <span class="cert-val">-</span>
+    </div>
+    <div class="cert-half">
+      <span class="cert-lbl">মৌজা</span>
+      <span class="cert-col">:</span>
+      <span class="cert-val">-</span>
+    </div>
+  </div>
+  <!-- Row 2: গ্রাম | ওয়ার্ড নং -->
+  <div class="cert-row-2col">
+    <div class="cert-half">
+      <span class="cert-lbl">গ্রাম</span>
+      <span class="cert-col">:</span>
+      <span class="cert-val"> চৌধুরী পাড়া </span>
+    </div>
+    <div class="cert-half">
+      <span class="cert-lbl">ওয়ার্ড নং</span>
+      <span class="cert-col">:</span>
+      <span class="cert-val">০৭</span>
+    </div>
+  </div>
+  <!-- Row 3: পৌরসভা/ইউনিয়ন(বাম) | ডাকঘর(ডান) — কলাম swap করা হয়েছে -->
+  <div class="cert-row-2col">
+    <div class="cert-half">
+      <span class="cert-lbl">পৌরসভা / ইউনিয়ন</span>
+      <span class="cert-col">:</span>
+      <span class="cert-val">মাটিরাঙ্গা পৌরসভা</span>
+    </div>
+    <div class="cert-half">
+      <span class="cert-lbl">ডাকঘর</span>
+      <span class="cert-col">:</span>
+      <span class="cert-val">মাটিরাঙ্গা-৪৪৫০</span>
+    </div>
+  </div>
+  <!-- Row 4: উপজেলা/সিটি কর্পোরেশন(বাম) | জেলা(ডান) — কলাম swap করা হয়েছে -->
+  <div class="cert-row-2col">
+    <div class="cert-half">
+      <span class="cert-lbl">উপজেলা / সিটি কর্পোরেশন</span>
+      <span class="cert-col">:</span>
+      <span class="cert-val">মাটিরাঙ্গা</span>
+    </div>
+    <div class="cert-half">
+      <span class="cert-lbl">জেলা</span>
+      <span class="cert-col">:</span>
+      <span class="cert-val">খাগড়াছড়ি</span>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+  
+  <a class="verify-back-link" href="applications.html">← আবেদন ট্র্যাকিং পেজে ফিরে যান</a>
+</div>
+
+</main>
+
+<style>
+.footer-grid { display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:40px; padding-bottom:40px; }
+.footer-grid.footer-grid-m2 { grid-template-columns:2.2fr 1fr; gap:48px; }
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:28px;}.footer-grid.footer-grid-m2{grid-template-columns:1fr;}}
+@media(max-width:540px){.footer-grid{grid-template-columns:1fr;gap:20px;}}
+footer .container { padding-left:16px; padding-right:16px; }
+
+/* মডেল-২: কারিগরি সহযোগিতায় + প্রতিষ্ঠান — পাশাপাশি দুটি কার্ড, মাঝে দাগ */
+.ftr-m2-cards { display:flex; gap:36px; }
+.ftr-m2-card { min-width:0; }
+.ftr-m2-card:first-child { flex:1.2 1 0; }
+.ftr-m2-card:last-child { flex:1 1 0; }
+.ftr-m2-card + .ftr-m2-card { padding-left:32px; border-left:1px solid rgba(255,255,255,.15); }
+.ftr-m2-label { font-size:11px; font-weight:700; letter-spacing:.4px; color:rgba(255,255,255,.55); text-transform:uppercase; margin-bottom:14px; white-space:nowrap; }
+.ftr-m2-brand-row { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+.ftr-m2-logo { height:38px; width:auto; object-fit:contain; filter:brightness(0) invert(1); }
+.ftr-m2-logo-icon { font-size:1.8rem; }
+.ftr-m2-brand-text { display:flex; flex-direction:column; line-height:1.3; }
+.ftr-m2-brand-name { font-family:'Siyam Rupali','Noto Serif Bengali',serif; font-size:1.24rem; font-weight:700; color:#fff; letter-spacing:.2px; white-space:nowrap; }
+.ftr-m2-brand-tag { font-family:'Siyam Rupali','Noto Serif Bengali',serif; font-size:.76rem; color:rgba(255,255,255,.7); font-weight:400; margin-top:2px; }
+.ftr-m2-contact { list-style:none; padding:0; margin:0 0 20px; font-size:13.5px; }
+.ftr-m2-contact li { display:flex; gap:9px; align-items:flex-start; margin-bottom:10px; color:rgba(255,255,255,.75); }
+.ftr-m2-contact-clickable { cursor:pointer; border-radius:8px; padding:6px 8px; margin-left:-8px; margin-right:-8px; transition:background .15s; }
+.ftr-m2-contact-clickable:hover { background:rgba(255,255,255,.06); }
+.ftr-m2-contact-clickable:hover li { color:rgba(255,255,255,.95); }
+.ftr-m2-social { display:grid; grid-template-columns:1fr 1fr; gap:12px; max-width:280px; }
+.ftr-m2-social a { display:flex; align-items:center; justify-content:center; gap:7px; padding:8px 12px; border-radius:6px; font-size:13px; font-weight:600; text-decoration:none; color:#fff; white-space:nowrap; }
+.ftr-m2-org-heading { font-size:1.38rem; font-weight:700; color:#fff; letter-spacing:.2px; margin-bottom:14px; }
+.ftr-m2-org-name { font-family:'Siyam Rupali','Noto Serif Bengali',serif; font-size:1.08rem; font-weight:700; color:#fff; margin-bottom:6px; }
+.ftr-m2-org-link { display:inline-block; color:#f4a228; font-size:13px; font-weight:600; text-decoration:none; margin-top:4px; }
+@media(max-width:540px){ .ftr-m2-cards{flex-direction:column; gap:24px;} .ftr-m2-card + .ftr-m2-card{padding-left:0; border-left:none; padding-top:24px; border-top:1px solid rgba(255,255,255,.15);} }
+</style>
+<footer style="background:#0f1e3d;color:rgba(255,255,255,.82);padding:56px 0 0;margin-top:64px">
+  <div class="container">
+    <div class="footer-grid footer-grid-m2">
+
+      <!-- কলাম ১: মডেল-১ এ লোগো+ট্যাগলাইন+সোশ্যাল, মডেল-২ এ পাশাপাশি দুটি কার্ড (কারিগরি সহযোগিতায় + প্রতিষ্ঠান) -->
+                  <div class="ftr-m2-cards">
+        <!-- বাম কার্ড: কারিগরি সহযোগিতায় (সাইট ব্র্যান্ড) -->
+        <div class="ftr-m2-card">
+          <div class="ftr-m2-label">🏫 কারিগরি সহযোগিতায়</div>
+          <div class="ftr-m2-brand-row">
+                          <img src="uploads/logos/6a8a677710545_1787455351.png" class="ftr-m2-logo" alt="পৌরসভা ডিজিটাল সেন্টার">
+                        <span class="ftr-m2-brand-text">
+              <span class="ftr-m2-brand-name">পৌরসভা ডিজিটাল সেন্টার</span>
+              <span class="ftr-m2-brand-tag">জনগণের দোরগোড়ায় সেবা</span>
+            </span>
+          </div>
+          <ul class="ftr-m2-contact">
+            <li><span>📍</span>মাটিরাঙ্গা পৌরসভা, খাগড়াছড়ি</li>            <li><span>📞</span>01865-234567</li>            <li><span>✉️</span>pdcmatiranga@Gmail.com</li>          </ul>
+          <div class="ftr-m2-social">
+                                              </div>
+          <a href="contact.html" class="ftr-m2-org-link" style="display:inline-block;margin-top:16px">☎️ যোগাযোগ &rarr;</a>
+        </div>
+
+        <!-- ডান কার্ড: প্রতিষ্ঠান — লোগো ছাড়া, নাম+যোগাযোগ তথ্য নামের ঠিক নিচে -->
+        <div class="ftr-m2-card">
+          <div class="ftr-m2-org-heading">প্রতিষ্ঠান</div>
+          <div class="ftr-m2-org-name">মাটিরাঙ্গা পৌরসভা</div>
+          <ul class="ftr-m2-contact ftr-m2-contact-clickable" onclick="openMessageModal()" title="বার্তা পাঠাতে ক্লিক করুন">
+            <li><span>📍</span>মাটিরাঙ্গা, খাগড়াছড়ি পার্বত্য জেলা</li>                        <li><span>✉️</span>matirangapourashava@gmail.com</li>          </ul>
+          <a href="javascript:void(0)" onclick="openMessageModal()" class="ftr-m2-org-link">☎️ যোগাযোগ &rarr;</a>
+          <a href="services.html" class="ftr-m2-org-link" style="margin-left:16px">সকল সেবা &rarr;</a>
+        </div>
+      </div>
+      
+      <!-- কলাম ২: সেবা — শুধু মডেল-১ এ দেখানো হয়; মডেল-২ তে প্রতিষ্ঠান কার্ডে "সকল সেবা →" লিংক দিয়ে এটা কভার হয় -->
+      
+      <!-- কলাম ৩: লিংক -->
+      <div>
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;margin-bottom:16px">লিংক</h4>
+        <ul style="list-style:none;padding:0">
+                    <li style="margin-bottom:8px"><a href="index.html" style="color:rgba(255,255,255,.7);font-size:13.5px;text-decoration:none" onmouseover="this.style.color='#f4a228'" onmouseout="this.style.color='rgba(255,255,255,.7)'">হোম</a></li>
+                    <li style="margin-bottom:8px"><a href="about.html" style="color:rgba(255,255,255,.7);font-size:13.5px;text-decoration:none" onmouseover="this.style.color='#f4a228'" onmouseout="this.style.color='rgba(255,255,255,.7)'">আমাদের সম্পর্কে</a></li>
+                    <li style="margin-bottom:8px"><a href="team.html" style="color:rgba(255,255,255,.7);font-size:13.5px;text-decoration:none" onmouseover="this.style.color='#f4a228'" onmouseout="this.style.color='rgba(255,255,255,.7)'">টিম</a></li>
+                    <li style="margin-bottom:8px"><a href="faq.html" style="color:rgba(255,255,255,.7);font-size:13.5px;text-decoration:none" onmouseover="this.style.color='#f4a228'" onmouseout="this.style.color='rgba(255,255,255,.7)'">সাধারণ প্রশ্ন</a></li>
+                  </ul>
+      </div>
+
+      <!-- কলাম ৪: যোগাযোগ — শুধু মডেল-১ এ; মডেল-২ তে এই তথ্য এখন "প্রতিষ্ঠান" কার্ডের নামের নিচেই দেখানো হয় -->
+      
+    </div>
+
+    <!-- Footer Bottom -->
+        <div style="border-top:1px solid rgba(255,255,255,.1);padding:16px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+      <p style="font-size:13px;color:rgba(255,255,255,.5)">© ২০২৬ পৌরসভা ডিজিটাল সেন্টার, মাটিরাঙ্গা পৌরসভা, খাগড়াছড়ি. সকল অধিকার সংরক্ষিত।</p>
+      <div style="display:flex;gap:16px">
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,.45);text-decoration:none" onmouseover="this.style.color='#f4a228'" onmouseout="this.style.color='rgba(255,255,255,.45)'">গোপনীয়তা নীতি</a>
+        <span style="color:rgba(255,255,255,.2)">|</span>
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,.45);text-decoration:none" onmouseover="this.style.color='#f4a228'" onmouseout="this.style.color='rgba(255,255,255,.45)'">শর্তাবলী</a>
+      </div>
+    </div>
+      </div>
+</footer>
+
+<script src="assets/js/public.js"></script>
+
+<!-- ============================================================
+     স্লাইডিং কার্ট প্যানেল
+     ============================================================ -->
+<div id="cartOverlay" onclick="closeCartPanel()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1100;backdrop-filter:blur(2px)"></div>
+
+<div id="cartPanel" style="
+  position:fixed;top:0;right:-420px;width:min(420px,100vw);height:100vh;
+  background:#fff;z-index:1101;
+  box-shadow:-8px 0 40px rgba(0,0,0,.18);
+  display:flex;flex-direction:column;
+  transition:right .32s cubic-bezier(.4,0,.2,1);
+">
+  <!-- প্যানেল হেডার -->
+  <div style="background:linear-gradient(135deg,#1a3a6e,#1e4d8c);color:#fff;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0">
+    <span style="font-size:1.05rem;font-weight:700">🛒 কার্ট <span id="cpCount" style="background:rgba(255,255,255,.2);border-radius:20px;padding:2px 10px;font-size:13px;margin-left:4px">0</span></span>
+    <button onclick="closeCartPanel()" style="background:rgba(255,255,255,.15);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background .15s" onmouseover="this.style.background='rgba(255,255,255,.3)'" onmouseout="this.style.background='rgba(255,255,255,.15)'">✕</button>
+  </div>
+
+  <!-- আইটেম লিস্ট -->
+  <div id="cpItems" style="flex:1;overflow-y:auto;padding:12px 16px"></div>
+
+  <!-- মোট + অর্ডার বাটন -->
+  <div style="border-top:1px solid #e8eef6;padding:16px 20px;flex-shrink:0;background:#f9fafb">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <span style="font-size:1rem;font-weight:600;color:#374151">মোট:</span>
+      <span id="cpTotal" style="font-size:1.2rem;font-weight:800;color:#f59e0b">৳০</span>
+    </div>
+    <button onclick="onClickOrder()" id="cpOrderBtn" style="
+      width:100%;padding:14px;
+      background:linear-gradient(135deg,#1e3a5f,#1e5aa8);
+      color:#fff;border:none;border-radius:10px;
+      font-size:15px;font-weight:700;font-family:inherit;
+      cursor:pointer;display:flex;align-items:center;justify-content:space-between;
+      transition:opacity .15s
+    ">
+      <span>অর্ডার করুন</span>
+      <span style="background:rgba(255,255,255,.15);border-radius:8px;padding:4px 10px;font-size:20px">🛒</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     লগিন / নিবন্ধন পপআপ
+     ============================================================ -->
+<div id="authOverlay" onclick="closeAuthModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:1200;backdrop-filter:blur(3px);align-items:center;justify-content:center"></div>
+
+<div id="authModal" style="
+  display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.92);
+  width:min(520px,94vw);background:#fff;border-radius:18px;z-index:1201;
+  box-shadow:0 32px 80px rgba(0,0,0,.25);overflow:hidden;
+  transition:transform .25s cubic-bezier(.4,0,.2,1),opacity .25s;opacity:0;
+">
+  <!-- মোডাল হেডার -->
+  <div style="background:linear-gradient(135deg,#1a3a6e,#1e4d8c);color:#fff;padding:26px 28px 22px;text-align:center;position:relative">
+    <div style="font-size:2rem;margin-bottom:6px">🔐</div>
+    <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:4px">লগইন / নিবন্ধন</h2>
+    <p style="font-size:13px;opacity:.8">অ্যাডমিন বা গ্রাহক হিসেবে লগিন করুন</p>
+    <button onclick="closeAuthModal()" style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,.2);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:15px" onmouseover="this.style.background='rgba(255,255,255,.35)'" onmouseout="this.style.background='rgba(255,255,255,.2)'">✕</button>
+  </div>
+
+  <div style="padding:24px 28px 28px">
+    <!-- ট্যাব -->
+    <div style="display:flex;background:#f3f4f6;border-radius:10px;padding:4px;margin-bottom:22px">
+      <button id="tabLoginBtn" onclick="switchAuthTab('login')" style="flex:1;padding:9px;border:none;border-radius:8px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .2s;background:#1e3a5f;color:#fff">লগইন</button>
+      <button id="tabRegBtn"   onclick="switchAuthTab('register')" style="flex:1;padding:9px;border:none;border-radius:8px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .2s;background:transparent;color:#6b7280">নিবন্ধন</button>
+    </div>
+
+    <!-- লগিন ফর্ম -->
+    <div id="loginForm">
+      <div style="margin-bottom:14px">
+        <label style="display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:5px">ইমেইল / ইউজার আইডি</label>
+        <input id="lPhone" type="text" placeholder="email@example.com" style="width:100%;padding:11px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:14px;font-family:inherit;color:#111;background:#fff;box-sizing:border-box;transition:border-color .15s">
+      </div>
+      <div style="margin-bottom:16px">
+        <label style="display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:5px">পাসওয়ার্ড</label>
+        <input id="lPass" type="password" placeholder="••••••••" style="width:100%;padding:11px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:14px;font-family:inherit;color:#111;background:#fff;box-sizing:border-box;transition:border-color .15s">
+      </div>
+      <div style="background:#eff6ff;border-radius:8px;padding:10px 14px;font-size:12px;color:#1e40af;margin-bottom:16px">
+        💡 অ্যাডমিন: admin@nsk.gov.bd | গ্রাহক: নিবন্ধিত ইমেইল/আইডি
+      </div>
+      <div id="lError" style="display:none;background:#fef2f2;color:#991b1b;border:1px solid #fca5a5;padding:9px 13px;border-radius:8px;font-size:13px;margin-bottom:12px"></div>
+      <button onclick="doLogin()" style="width:100%;padding:13px;background:#1e3a5f;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer">লগিন করুন</button>
+    </div>
+
+    <!-- নিবন্ধন ফর্ম -->
+    <div id="registerForm" style="display:none">
+      <div style="margin-bottom:14px">
+        <label style="display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:5px">নাম</label>
+        <input id="rName" type="text" placeholder="পূর্ণ নাম" style="width:100%;padding:11px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:14px;font-family:inherit;color:#111;background:#fff;box-sizing:border-box;transition:border-color .15s">
+      </div>
+      <div style="margin-bottom:14px">
+        <label style="display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:5px">ইমেইল / ইউজার আইডি</label>
+        <input id="rPhone" type="text" placeholder="email@example.com" style="width:100%;padding:11px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:14px;font-family:inherit;color:#111;background:#fff;box-sizing:border-box;transition:border-color .15s">
+      </div>
+      <div style="margin-bottom:16px">
+        <label style="display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:5px">পাসওয়ার্ড</label>
+        <input id="rPass" type="password" placeholder="••••••••" style="width:100%;padding:11px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:14px;font-family:inherit;color:#111;background:#fff;box-sizing:border-box;transition:border-color .15s">
+      </div>
+      <div style="background:#eff6ff;border-radius:8px;padding:10px 14px;font-size:12px;color:#1e40af;margin-bottom:16px">
+        💡 অ্যাডমিন: admin@nsk.gov.bd | গ্রাহক: নিবন্ধিত ইমেইল/আইডি
+      </div>
+      <div id="rError" style="display:none;background:#fef2f2;color:#991b1b;border:1px solid #fca5a5;padding:9px 13px;border-radius:8px;font-size:13px;margin-bottom:12px"></div>
+      <button onclick="doRegister()" style="width:100%;padding:13px;background:#1e3a5f;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer">নিবন্ধন করুন</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     পেমেন্ট মোডাল
+     ============================================================ -->
+<div id="payOverlay" onclick="closePayModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:1300;backdrop-filter:blur(3px)"></div>
+
+<div id="payModal" style="
+  display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.92);
+  width:min(500px,94vw);background:#fff;border-radius:18px;z-index:1301;
+  box-shadow:0 32px 80px rgba(0,0,0,.25);overflow:hidden;
+  transition:transform .25s,opacity .25s;opacity:0
+">
+  <div style="background:linear-gradient(135deg,#1a3a6e,#1e4d8c);color:#fff;padding:22px 24px;display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <div style="font-size:1.1rem;font-weight:700">💳 পেমেন্ট ও অর্ডার</div>
+      <div style="font-size:12px;opacity:.75;margin-top:2px">পেমেন্ট মাধ্যম বেছে নিন</div>
+    </div>
+    <button onclick="closePayModal()" style="background:rgba(255,255,255,.2);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:15px" onmouseover="this.style.background='rgba(255,255,255,.35)'" onmouseout="this.style.background='rgba(255,255,255,.2)'">✕</button>
+  </div>
+
+  <div style="padding:22px 24px 24px">
+    <!-- লগিন ব্যানার -->
+    <div id="payUserInfo" style="background:#e8f0fe;border:1px solid #c5d8f8;border-radius:8px;padding:10px 14px;font-size:13px;color:#1a3a6e;margin-bottom:18px;display:flex;align-items:center;gap:8px">
+      <span>✅</span><span id="payUserName">—</span>
+    </div>
+
+    <!-- কার্ট সারসংক্ষেপ -->
+    <div style="background:#f9fafb;border-radius:10px;padding:14px 16px;margin-bottom:18px">
+      <div style="font-size:13px;font-weight:600;color:#374151;margin-bottom:10px">অর্ডার সারসংক্ষেপ</div>
+      <div id="payItemsList" style="font-size:13px;color:#6b7280;margin-bottom:10px"></div>
+      <div style="display:flex;justify-content:space-between;border-top:1px solid #e5e7eb;padding-top:10px">
+        <span style="font-weight:700;color:#111">সর্বমোট:</span>
+        <span id="payTotalAmt" style="font-weight:800;font-size:1.1rem;color:#f59e0b">৳০</span>
+      </div>
+    </div>
+
+    <!-- ঠিকানা -->
+    <div style="margin-bottom:16px">
+      <label style="display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:5px">ডেলিভারি ঠিকানা <span style="color:#9ca3af;font-weight:400">(ঐচ্ছিক)</span></label>
+      <textarea id="payAddress" rows="2" placeholder="আপনার ঠিকানা লিখুন..." style="width:100%;padding:10px 13px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:13px;font-family:inherit;resize:none;box-sizing:border-box"></textarea>
+    </div>
+
+    <!-- পেমেন্ট মেথড -->
+    <div style="margin-bottom:18px">
+      <div style="font-size:13px;font-weight:600;color:#374151;margin-bottom:10px">পেমেন্ট মাধ্যম</div>
+      <div id="payMethods" style="display:grid;grid-template-columns:1fr 1fr;gap:8px"></div>
+    </div>
+
+    <div id="payError" style="display:none;background:#fef2f2;color:#991b1b;border:1px solid #fca5a5;padding:9px 13px;border-radius:8px;font-size:13px;margin-bottom:12px"></div>
+
+    <button onclick="doPlaceOrder()" id="doOrderBtn" style="width:100%;padding:14px;background:linear-gradient(135deg,#1e3a5f,#1e5aa8);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer">
+      ✅ অর্ডার নিশ্চিত করুন
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     অর্ডার সফল মোডাল
+     ============================================================ -->
+<div id="successOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1400;backdrop-filter:blur(4px)"></div>
+
+<div id="successModal" style="
+  display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-56%);
+  width:min(440px,92vw);background:#fff;border-radius:20px;z-index:1401;
+  box-shadow:0 40px 100px rgba(0,0,0,.3);overflow:hidden;text-align:center
+">
+  <div style="background:linear-gradient(135deg,#059669,#065f46);color:#fff;padding:32px 24px 24px">
+    <div style="font-size:3.5rem;margin-bottom:8px">🎉</div>
+    <h2 style="font-size:1.3rem;font-weight:700">অর্ডার সফল হয়েছে!</h2>
+  </div>
+  <div style="padding:24px 28px 28px">
+    <div id="successBody" style="font-size:14px;color:#374151;line-height:1.8;margin-bottom:20px"></div>
+    <a id="successDashLink" href="login.html" style="display:block;padding:13px;background:#1e3a5f;color:#fff;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;margin-bottom:10px">📊 ড্যাশবোর্ড দেখুন</a>
+    <button onclick="closeSuccessModal()" style="width:100%;padding:11px;background:#f3f4f6;color:#374151;border:none;border-radius:10px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer">✕ বন্ধ করুন</button>
+  </div>
+</div>
+
+<!-- কার্ট টোস্ট -->
+<div id="cartToast" style="
+  position:fixed;bottom:110px;right:28px;
+  background:#1e3a5f;color:#fff;
+  padding:11px 18px;border-radius:10px;
+  font-size:13.5px;font-weight:600;
+  box-shadow:0 6px 24px rgba(0,0,0,.18);
+  display:none;z-index:9998;
+  animation:slideUp .3s ease;
+">✅ কার্টে যোগ হয়েছে!</div>
+
+<style>
+@keyframes slideUp { from{transform:translateY(18px);opacity:0} to{transform:translateY(0);opacity:1} }
+
+/* পেমেন্ট অপশন বাটন */
+.pm-btn {
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 11px 10px;
+  cursor: pointer;
+  background: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  transition: all .18s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.pm-btn:hover { border-color: #1e3a5f; background: #f0f4ff; }
+.pm-btn.selected { border-color: #1e3a5f; background: #eff6ff; color: #1e3a5f; }
+</style>
+
+<script>
+var AJAX_URL = 'ajax_cart_order.json';
+var BASE_URL  = 'index.html';
+var currency  = '৳';
+var _selectedPayMethod = 'cash_on_delivery';
+var _authCallback = null; // লগিনের পরে কী করবে
+
+// ===== স্লাইডিং কার্ট প্যানেল =====
+function openCartPanel() {
+  renderCartPanel();
+  document.getElementById('cartOverlay').style.display = 'block';
+  var p = document.getElementById('cartPanel');
+  p.style.right = '0';
+  document.body.style.overflow = 'hidden';
+}
+function closeCartPanel() {
+  document.getElementById('cartOverlay').style.display = 'none';
+  document.getElementById('cartPanel').style.right = '-420px';
+  document.body.style.overflow = '';
+}
+
+function renderCartPanel() {
+  var cart   = getCart();
+  var items  = document.getElementById('cpItems');
+  var total  = 0;
+  var count  = 0;
+
+  if (cart.length === 0) {
+    items.innerHTML = '<div style="text-align:center;padding:60px 20px;color:#9ca3af"><div style="font-size:3rem;margin-bottom:12px">🛒</div><div style="font-size:15px;font-weight:600">কার্ট খালি</div><div style="font-size:13px;margin-top:6px">পণ্য বা সেবা যোগ করুন</div></div>';
+    document.getElementById('cpTotal').textContent = currency + '০';
+    document.getElementById('cpCount').textContent = '0';
+    return;
+  }
+
+  var html = '';
+  cart.forEach(function(item, idx) {
+    var line = item.price * item.qty;
+    total += line;
+    count += item.qty;
+    var img = item.image ? '<img src="'+item.image+'" style="width:44px;height:44px;object-fit:cover;border-radius:8px;border:1px solid #e8eef6">' :
+      '<div style="width:44px;height:44px;border-radius:8px;background:#e8f0fe;display:flex;align-items:center;justify-content:center;font-size:20px">📦</div>';
+    html += '<div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #f3f4f6">'
+      + img
+      + '<div style="flex:1;min-width:0">'
+      + '<div style="font-size:13.5px;font-weight:600;color:#1a3c6e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+item.name+'</div>'
+      + '<div style="font-size:12px;color:#9ca3af;margin-top:1px">'+currency+parseFloat(item.price).toFixed(0)+' × '+item.qty+'</div>'
+      + '</div>'
+      + '<div style="display:flex;align-items:center;gap:6px;flex-shrink:0">'
+      + '<button onclick="cpChangeQty('+idx+',-1)" style="width:26px;height:26px;border:1.5px solid #e5e7eb;background:#fff;border-radius:6px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center">−</button>'
+      + '<span style="font-size:13px;font-weight:700;min-width:20px;text-align:center">'+item.qty+'</span>'
+      + '<button onclick="cpChangeQty('+idx+',1)" style="width:26px;height:26px;border:1.5px solid #e5e7eb;background:#fff;border-radius:6px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center">+</button>'
+      + '<button onclick="cpRemove('+idx+')" style="width:26px;height:26px;border:none;background:#fff3f3;border-radius:6px;cursor:pointer;color:#dc3545;font-size:14px;margin-left:2px;display:flex;align-items:center;justify-content:center">✕</button>'
+      + '</div>'
+      + '</div>';
+  });
+  items.innerHTML = html;
+  document.getElementById('cpTotal').textContent = currency + total.toFixed(0);
+  document.getElementById('cpCount').textContent = count;
+}
+
+function cpChangeQty(idx, d) {
+  var cart = getCart();
+  if (!cart[idx]) return;
+  cart[idx].qty = Math.max(1, cart[idx].qty + d);
+  saveCart(cart);
+  renderCartPanel();
+}
+function cpRemove(idx) {
+  var cart = getCart();
+  cart.splice(idx, 1);
+  saveCart(cart);
+  renderCartPanel();
+  if (typeof updateFabBadge === 'function') updateFabBadge();
+}
+
+// ===== অর্ডার বাটন চাপলে =====
+function onClickOrder() {
+  var cart = getCart();
+  if (cart.length === 0) { alert('কার্ট খালি!'); return; }
+
+  // লগিন চেক (AJAX)
+  fetch(AJAX_URL + '?action=status')
+    .then(function(r){ return r.json(); })
+    .then(function(d) {
+      if (d.logged_in) {
+        // সরাসরি পেমেন্ট মোডাল
+        openPayModal(d.name, d.phone);
+      } else {
+        // লগিন মোডাল
+        _authCallback = function(name, phone) { openPayModal(name, phone); };
+        openAuthModal();
+      }
+    });
+}
+
+// ===== লগিন / নিবন্ধন মোডাল =====
+function openAuthModal() {
+  document.getElementById('authOverlay').style.display = 'block';
+  var m = document.getElementById('authModal');
+  m.style.display = 'block';
+  setTimeout(function() {
+    m.style.transform = 'translate(-50%,-50%) scale(1)';
+    m.style.opacity   = '1';
+  }, 10);
+  switchAuthTab('login');
+}
+function closeAuthModal() {
+  var m = document.getElementById('authModal');
+  m.style.transform = 'translate(-50%,-50%) scale(.92)';
+  m.style.opacity   = '0';
+  setTimeout(function() {
+    m.style.display = 'none';
+    document.getElementById('authOverlay').style.display = 'none';
+  }, 220);
+}
+function switchAuthTab(tab) {
+  var isLogin = tab === 'login';
+  document.getElementById('loginForm').style.display    = isLogin ? '' : 'none';
+  document.getElementById('registerForm').style.display = isLogin ? 'none' : '';
+  var lb = document.getElementById('tabLoginBtn');
+  var rb = document.getElementById('tabRegBtn');
+  lb.style.background = isLogin ? '#1e3a5f' : 'transparent';
+  lb.style.color      = isLogin ? '#fff' : '#6b7280';
+  rb.style.background = isLogin ? 'transparent' : '#1e3a5f';
+  rb.style.color      = isLogin ? '#6b7280' : '#fff';
+}
+
+function doLogin() {
+  var phone = document.getElementById('lPhone').value.trim();
+  var pass  = document.getElementById('lPass').value;
+  var err   = document.getElementById('lError');
+  err.style.display = 'none';
+  if (!phone || !pass) { err.style.display='block'; err.textContent='মোবাইল নম্বর ও পাসওয়ার্ড দিন।'; return; }
+
+  var fd = new FormData();
+  fd.append('action','login'); fd.append('login',phone); fd.append('password',pass);
+  fetch(AJAX_URL, {method:'POST', body:fd})
+    .then(function(r){ return r.json(); })
+    .then(function(d) {
+      if (d.ok) {
+        closeAuthModal();
+        if (_authCallback) _authCallback(d.name, d.phone);
+      } else {
+        err.style.display = 'block';
+        err.textContent   = d.msg;
+      }
+    });
+}
+
+function doRegister() {
+  var name  = document.getElementById('rName').value.trim();
+  var phone = document.getElementById('rPhone').value.trim();
+  var pass  = document.getElementById('rPass').value;
+  var err   = document.getElementById('rError');
+  err.style.display = 'none';
+  if (!name || !phone || !pass) { err.style.display='block'; err.textContent='সব ঘর পূরণ করুন।'; return; }
+
+  var fd = new FormData();
+  fd.append('action','register'); fd.append('name',name); fd.append('phone',phone); fd.append('password',pass);
+  fetch(AJAX_URL, {method:'POST', body:fd})
+    .then(function(r){ return r.json(); })
+    .then(function(d) {
+      if (d.ok) {
+        closeAuthModal();
+        if (_authCallback) _authCallback(d.name, d.phone);
+      } else {
+        err.style.display = 'block';
+        err.textContent   = d.msg;
+      }
+    });
+}
+
+// ===== পেমেন্ট মোডাল =====
+function openPayModal(userName, userPhone) {
+  closeCartPanel();
+  document.getElementById('payUserName').textContent = '✅ লগিন: ' + userName + ' (' + userPhone + ')';
+
+  // কার্ট সারসংক্ষেপ
+  var cart  = getCart();
+  var total = 0;
+  var html  = '';
+  cart.forEach(function(item) {
+    var line = item.price * item.qty;
+    total += line;
+    html += '<div style="display:flex;justify-content:space-between;margin-bottom:5px">'
+      + '<span>'+item.name+' × '+item.qty+'</span>'
+      + '<span style="font-weight:600">'+currency+line.toFixed(0)+'</span>'
+      + '</div>';
+  });
+  document.getElementById('payItemsList').innerHTML = html;
+  document.getElementById('payTotalAmt').textContent = currency + total.toFixed(0);
+
+  // পেমেন্ট মেথড
+  fetch(AJAX_URL + '?action=payment_methods')
+    .then(function(r){ return r.json(); })
+    .then(function(d) {
+      var pmDiv = document.getElementById('payMethods');
+      pmDiv.innerHTML = '';
+      var first = true;
+      d.methods.forEach(function(m) {
+        var btn = document.createElement('button');
+        btn.className = 'pm-btn' + (first ? ' selected' : '');
+        btn.setAttribute('data-key', m.key);
+        btn.innerHTML = '<span style="font-size:18px">'+m.icon+'</span><span>'+m.label+'</span>';
+        btn.onclick = function() {
+          document.querySelectorAll('.pm-btn').forEach(function(b){ b.classList.remove('selected'); });
+          btn.classList.add('selected');
+          _selectedPayMethod = m.key;
+        };
+        if (first) { _selectedPayMethod = m.key; first = false; }
+        pmDiv.appendChild(btn);
+      });
+    });
+
+  document.getElementById('payOverlay').style.display = 'block';
+  var m = document.getElementById('payModal');
+  m.style.display = 'block';
+  setTimeout(function() {
+    m.style.transform = 'translate(-50%,-50%) scale(1)';
+    m.style.opacity   = '1';
+  }, 10);
+}
+function closePayModal() {
+  var m = document.getElementById('payModal');
+  m.style.transform = 'translate(-50%,-50%) scale(.92)';
+  m.style.opacity   = '0';
+  setTimeout(function() {
+    m.style.display = 'none';
+    document.getElementById('payOverlay').style.display = 'none';
+  }, 220);
+}
+
+function doPlaceOrder() {
+  var cart    = getCart();
+  var address = document.getElementById('payAddress').value;
+  var err     = document.getElementById('payError');
+  var btn     = document.getElementById('doOrderBtn');
+  err.style.display = 'none';
+
+  if (cart.length === 0) { err.style.display='block'; err.textContent='কার্ট খালি!'; return; }
+
+  btn.disabled = true;
+  btn.textContent = '⏳ প্রক্রিয়াকরণ হচ্ছে...';
+
+  var fd = new FormData();
+  fd.append('action','place_order');
+  fd.append('cart_json', JSON.stringify(cart));
+  fd.append('payment_method', _selectedPayMethod);
+  fd.append('address', address);
+
+  fetch(AJAX_URL, {method:'POST', body:fd})
+    .then(function(r){ return r.json(); })
+    .then(function(d) {
+      btn.disabled = false;
+      btn.textContent = '✅ অর্ডার নিশ্চিত করুন';
+      if (d.ok) {
+        // কার্ট খালি করো
+        localStorage.removeItem('nagrik_cart');
+        if (typeof updateCartCount === 'function') updateCartCount();
+        if (typeof updateFabBadge === 'function') updateFabBadge();
+
+        closePayModal();
+        showSuccessModal(d);
+      } else {
+        err.style.display = 'block';
+        err.textContent   = d.msg;
+      }
+    });
+}
+
+function showSuccessModal(d) {
+  var payLabels = {
+    'cash_on_delivery': 'ক্যাশ অন ডেলিভারি',
+    'bkash': 'বিকাশ', 'nagad': 'নগদ', 'rocket': 'রকেট'
+  };
+  var body = '<div style="font-size:1.4rem;font-weight:800;color:#059669;margin-bottom:12px">'+d.currency+parseFloat(d.total).toFixed(0)+'</div>'
+    + '<table style="width:100%;font-size:13px;margin-bottom:10px">'
+    + '<tr><td style="color:#6b7280;padding:3px 0">অর্ডার নম্বর:</td><td style="font-weight:700;color:#111">'+d.order_id+'</td></tr>'
+    + '<tr><td style="color:#6b7280;padding:3px 0">পেমেন্ট মাধ্যম:</td><td style="font-weight:600">'+(payLabels[d.pay_method]||d.pay_method)+'</td></tr>'
+    + '<tr><td style="color:#6b7280;padding:3px 0">জমা:</td><td style="font-weight:700;color:#059669">'+d.currency+parseFloat(d.paid).toFixed(0)+'</td></tr>'
+    + (d.due > 0 ? '<tr><td style="color:#6b7280;padding:3px 0">বাকি:</td><td style="font-weight:700;color:#dc2626">'+d.currency+parseFloat(d.due).toFixed(0)+'</td></tr>' : '')
+    + '</table>';
+
+  document.getElementById('successBody').innerHTML = body;
+  document.getElementById('successOverlay').style.display = 'block';
+  var sm = document.getElementById('successModal');
+  sm.style.display = 'block';
+  setTimeout(function() {
+    sm.style.transform = 'translate(-50%,-50%)';
+    sm.style.opacity = '1';
+  }, 10);
+}
+function closeSuccessModal() {
+  document.getElementById('successModal').style.display = 'none';
+  document.getElementById('successOverlay').style.display = 'none';
+}
+
+// লগিন বাটনেও এখন মোডাল খুলবে (হেডার থেকে)
+document.addEventListener('DOMContentLoaded', function() {
+  // হেডারের লগিন লিংক পপআপে রুপান্তর (ঐচ্ছিক — শুধু পাবলিক পেজে)
+  var loginLinks = document.querySelectorAll('a[href$="/login.php"]');
+  loginLinks.forEach(function(a) {
+    // top-bar লগিন বোতামটাকে মোডাল বানাও
+    if (a.classList.contains('btn-sm') && !a.href.includes('dashboard')) {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        _authCallback = function() { window.location.reload(); };
+        openAuthModal();
+      });
+    }
+  });
+});
+</script><script>
+// সুপার এডমিন ব্যতীত সবার জন্য পাবলিক পেজে মাউসের ডান-বাটন (রাইট-ক্লিক/কনটেক্সট মেনু) বন্ধ
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+</script>
+</body>
+
+<!-- Mirrored from www.matirangapaurashava.com/verify.php?cert_no=%E0%A6%AE%E0%A6%BE%E0%A6%9F%E0%A6%BF%2F%E0%A6%AA%E0%A7%8C%E0%A6%B0%2F%E0%A6%9C%E0%A6%BE%2F2026%2F00382&lang=bn by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Oct 2026 12:10:04 GMT -->
+</html>
+
