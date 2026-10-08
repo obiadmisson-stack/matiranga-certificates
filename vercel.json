@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://www.matirangapaurashava.com/",
+      "permanent": true
+    }
+  ]
+}
