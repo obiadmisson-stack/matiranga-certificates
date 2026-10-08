@@ -1,0 +1,21 @@
+
+@keyframes slideUp { from{transform:translateY(18px);opacity:0} to{transform:translateY(0);opacity:1} }
+
+/* পেমেন্ট অপশন বাটন */
+.pm-btn {
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 11px 10px;
+  cursor: pointer;
+  background: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  transition: all .18s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.pm-btn:hover { border-color: #1e3a5f; background: #f0f4ff; }
+.pm-btn.selected { border-color: #1e3a5f; background: #eff6ff; color: #1e3a5f; }

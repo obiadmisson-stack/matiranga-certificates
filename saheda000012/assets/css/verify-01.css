@@ -1,0 +1,178 @@
+
+:root {
+  --font: 'Hind Siliguri', 'SolaimanLipi', 'Kalpurush', 'Vrinda', 'Nirmala UI', Arial, sans-serif;
+  --font-heading: 'Noto Serif Bengali', 'Hind Siliguri', 'SolaimanLipi', 'Kalpurush', 'Vrinda', serif;
+  --font-logo: 'Siyam Rupali', 'Noto Serif Bengali', 'Hind Siliguri', serif;
+}
+
+/* নেভ লিংক hover — active pill */
+.main-nav a.active {
+  background: rgba(255,255,255,.18) !important;
+  color: #fff !important;
+}
+
+/* ===== মোবাইল সাইডবার ড্রয়ার ===== */
+/* ওভারলে (backdrop) */
+#navOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 990;
+}
+#navOverlay.open { display: block; }
+
+@media (max-width: 768px) {
+  /* হেডার row ঠিক করো — লোগো বাঁয়ে, বাটন ডানে */
+  header .container {
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px 12px !important;
+    gap: 8px !important;
+  }
+
+  /* লোগো সঙ্কুচিত হবে কিন্তু হারাবে না */
+  header .container > a:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+  }
+  header .container > a:first-child span:last-child span:first-child {
+    font-size: 1.05rem !important;
+  }
+  header .container > a:first-child span:last-child span:last-child {
+    font-size: .68rem !important;
+  }
+
+  /* ডানের বাটন গ্রুপ — shrink নয় */
+  header .container > div:last-child {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* লগিন বাটন ছোট করো */
+  header .container > div:last-child button,
+  header .container > div:last-child a[href*="dashboard"],
+  header .container > div:last-child a[href*="logout"] {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+  }
+
+  /* ল্যাং সুইচ ছোট */
+  header .container > div:last-child a[href*="?lang"] {
+    padding: 3px 7px !important;
+    font-size: 11px !important;
+  }
+
+  /* মেনু টগল বাটন দেখাও */
+  .menu-toggle { display: flex !important; align-items: center; }
+
+  /* ===== স্লাইডিং সাইডবার ড্রয়ার — ডান থেকে ===== */
+  .main-nav {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    height: 100%;
+    width: 280px;
+    max-width: 85vw;
+    background: #1a3a6e;
+    box-shadow: -4px 0 24px rgba(0,0,0,.35);
+    padding: 60px 0 20px;
+    z-index: 1000;
+    overflow-y: auto;
+    transform: translateX(100%);       /* বন্ধ অবস্থায় ডানে বাইরে */
+    transition: transform .28s cubic-bezier(.4,0,.2,1);
+  }
+  .main-nav.open {
+    transform: translateX(0);           /* খোলা অবস্থায় ভেতরে */
+  }
+  .main-nav a {
+    padding: 14px 22px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-radius: 0;
+    font-size: 16px;
+    width: 100%;
+    color: rgba(255,255,255,.9);
+    display: block;
+  }
+  .main-nav a:last-child { border-bottom: none; }
+
+  /* ড্রয়ারের ভেতরে বন্ধ বাটন */
+  .nav-close-btn {
+    display: flex !important;
+  }
+}
+
+/* ===== মডেল-২: প্রতিষ্ঠান ব্র্যান্ড বার (মডেল-১ এর মতোই রঙ) ===== */
+.hdr-m2-brand {
+  background: #1a3a6e;
+  border-bottom: 3px solid #f4a228;
+}
+.hdr-m2-brand-inner {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 24px 16px;
+}
+.hdr-m2-logo { flex: 0 0 auto; display:flex; align-items:center; justify-content:center; }
+.hdr-m2-logo img { height: 123px; width: 123px; object-fit: contain; border-radius: 50%; background:#fff; padding:6px; }
+.hdr-m2-logo-govt img { border-radius: 8px; background: transparent; padding: 0; }
+.hdr-m2-logo-icon { font-size: 4.8rem; }
+.hdr-m2-title { flex: 1 1 auto; text-align: center; color: #fff; }
+.hdr-m2-title h1 {
+  font-family: var(--font,'Hind Siliguri','SolaimanLipi','Kalpurush','Vrinda','Nirmala UI',Arial,sans-serif);
+  font-size: 77px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+.hdr-m2-title p { font-size: 42px; opacity: .92; margin: 0; line-height: 1.4; }
+.hdr-m2-title .hdr-m2-addr { font-size: 38px; opacity: .88; margin-top: 6px; }
+
+/* মডেল-২ নেভ হেডার — মডেল-১ এর মতোই রঙ */
+.site-header-m2 { background: #1a3a6e; }
+.site-header-m2 .nav-secondary-row { border-top-color: rgba(255,255,255,.14); }
+
+/* মডেল-২: বাঁ পাশে লোগো না থাকায় নেভ মেনু একপাশে হেলে পড়ত। সমাধান: বাঁ পাশের
+   অদৃশ্য স্পেসার ও ডানের বাটন গ্রুপ (hdr-actions) — দুটোকেই সমান flex-basis (1 1 0)
+   দেওয়া হলো, যাতে ব্রাউজার নিজে থেকেই দুই পাশ সমান-প্রস্থ রাখে এবং মাঝের নেভবার
+   আইটেমগুলো (nav-primary-slot) সবসময় প্রকৃত কেন্দ্রে থাকে — JS দিয়ে width মেপে
+   সিঙ্ক করার (আগের ভঙ্গুর পদ্ধতি, যেটা আসলে ঠিকভাবে কাজ করছিল না) কোনো দরকার নেই আর। */
+.site-header-m2 .hdr-actions-spacer { order: 1; flex: 1 1 0; min-width: 0; visibility: hidden; }
+.site-header-m2 .hdr-actions { flex: 1 1 0; min-width: 0; justify-content: flex-end; }
+.site-header-m2 .nav-primary-slot { flex: 0 1 auto; }
+
+@media (max-width: 768px) {
+  .hdr-m2-brand-inner { padding: 14px 12px; gap: 14px; }
+  .hdr-m2-logo img { height: 72px; width: 72px; }
+  .hdr-m2-logo-icon { font-size: 2.9rem; }
+  .hdr-m2-title h1 { font-size: 43px; }
+  .hdr-m2-title p, .hdr-m2-title .hdr-m2-addr { font-size: 30px; }
+  .hdr-m2-logo-govt { display: none; }
+}
+
+/* ডেস্কটপে ক্লোজ বাটন লুকাও */
+.nav-close-btn {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255,255,255,.15);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  z-index: 1001;
+}
